@@ -9,3 +9,9 @@ from rest_framework import generics
 class ListTodoItem(generics.ListCreateAPIView):
     queryset = TodoItem.objects.all()
     serializer_class = TodoItemSerializer
+
+
+class DetailTodoItem(generics.RetrieveAPIView):
+    queryset = TodoItem.objects.all()
+    serializer_class = TodoItemSerializer
+    
